@@ -1,3 +1,16 @@
+html, body {
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,6 +20,7 @@ body {
   font-family: "Courier New", monospace;
   margin: 0;
   padding: 0;
+  font-weight: 600;
 }
 
 main {
@@ -35,6 +49,7 @@ a {
   color: white;
 }
 
+
 header h1 {
   font-family: "DotGothic16", monospace;
   font-size: 3em;
@@ -45,6 +60,13 @@ header h1 {
 .tabs {
   font-family: "Courier New", monospace;
   margin: 20px;
+}
+
+.badge {
+  color:#2A2531;
+  font-size: 1em;
+  background-color: #ccc;
+  outline: 1px solid #333
 }
 
 [role="tablist"] {
@@ -137,6 +159,7 @@ header h1 {
 [role="tabpanel"] .heading-container {
   background: linear-gradient(to right, #fefefe, #747474);
   padding: 1em 1em 0 1em;
+  width: 100vw;
   border-bottom: 2px solid #666;
 }
 
@@ -337,5 +360,36 @@ footer p {
   #tabpanel-1 .about {
     align-items: center;
     padding: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  [role="tabpanel"] h2 {
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: 1.1em;
+    width: 200px;
+  }
+}
+@media (max-width: 375px) {
+  h1, h2, h3, h4, h5, h6, p, li, a, span, div {
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 375px) {
+  .project {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .project img {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-bottom: 20px !important;
+    object-fit: cover;
   }
 }
