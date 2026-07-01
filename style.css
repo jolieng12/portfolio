@@ -23,6 +23,10 @@ body {
   font-weight: 600;
 }
 
+html {
+  background-color: #2A2531;
+}
+
 main {
     padding-left: 5em;
     padding-right: 5em;
@@ -60,6 +64,8 @@ header h1 {
 .tabs {
   font-family: "Courier New", monospace;
   margin: 20px;
+  padding-left: 5em;
+  padding-right: 5em;
 }
 
 .badge {
@@ -277,8 +283,13 @@ footer {
   flex: 1;
 }
 
+h3 {
+  padding-bottom: 0.5em;
+}
+
 .project h3:focus, .project h3:hover {
-  transform: scale(105%);
+  transform-origin: left top;
+  transform: scale(1.1);
 }
 
 footer p {
@@ -327,9 +338,14 @@ footer p {
   box-sizing: border-box;
 }
 
+.columns {
+  padding: 20px;
+}
+
 #tabpanel-1 .columns {
   flex-direction: row;
   align-items: stretch;
+  padding: 0;
 }
 #tabpanel-1 .columns img {
   width: 40%;
